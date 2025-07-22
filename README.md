@@ -1,159 +1,125 @@
-<!DOCTYPE html>
+  
+      <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tienda de Cosmética</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0;
-    background: #fff0f5;
-    color: #333;
-  }
-  header {
-    background: #d6336c;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.8em;
-  }
-  nav {
-    margin-top: 10px;
-  }
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 25px;
-    padding: 25px 40px;
-  }
-  .product-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(214, 51, 108, 0.3);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease;
-  }
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  .product-card img {
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 4 / 3;
-  }
-  .product-info {
-    padding: 15px 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .product-info h3 {
-    margin: 0 0 10px;
-    color: #d6336c;
-  }
-  .product-info p.price {
-    font-weight: 700;
-    color: #a5003b;
-    font-size: 1.2em;
-    margin: 0 0 15px;
-  }
-  .product-info button {
-    background: #d6336c;
-    border: none;
-    color: white;
-    padding: 12px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1em;
-    transition: background 0.3s ease;
-  }
-  .product-info button:hover {
-    background: #a5003b;
-  }
-  footer {
-    background: #d6336c;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Tienda de Cosmética</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      background: #d6336c;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 2em;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(214, 51, 108, 0.2);
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+    .product img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 400px;
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h2 {
+      color: #d6336c;
+      margin-bottom: 10px;
+    }
+    .product-info p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    .buttons a {
+      display: inline-block;
+      background: #d6336c;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-right: 10px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .buttons a:hover {
+      background: #a5003b;
+    }
+    footer {
+      text-align: center;
+      color: #d6336c;
+      padding: 30px 0;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  Tienda de Cosmética
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Catálogo</a>
-    <a href="#">Contacto</a>
-  </nav>
+  Mi Tienda de Cosmética
 </header>
 
-<section class="products" id="products-container">
-  <!-- Los productos se insertan aquí con JavaScript -->
+<section id="catalogo">
+  <!-- Aquí se cargan los productos -->
 </section>
 
 <footer>
-  &copy; 2025 Tienda de Cosmética | Contacto: info@cosmetica.com
+  &copy; 2025 Cosmética y Belleza | WhatsApp: +34 624 387 627
 </footer>
 
 <script>
-  // Aquí defines tus productos
   const productos = [
     {
-      nombre: "Labial Rojo Intenso",
-      precio: 15.99,
-      imagen: "https://images.unsplash.com/photo-1509475826633-fed577a2c71b?auto=format&fit=crop&w=400&q=80",
-      descripcion: "Color vibrante y larga duración."
+      nombre: "Perfume Elegante de Mujer",
+      descripcion: "Aroma floral duradero. Perfecto para cualquier ocasión.",
+      imagen: "https://ae01.alicdn.com/kf/S9121738e0a6e42aa8917e61f398b0d8c3.jpg",
+      whatsapp: "https://wa.me/34624387627?text=Hola,%20quiero%20el%20Perfume%20Elegante"
     },
     {
-      nombre: "Perfume Floral",
-      precio: 45.00,
-      imagen: "https://images.unsplash.com/photo-1512418490979-92798cec27d6?auto=format&fit=crop&w=400&q=80",
-      descripcion: "Fragancia fresca y elegante."
+      nombre: "Paleta Profesional de Sombras",
+      descripcion: "Colores intensos y duraderos para maquillaje profesional.",
+      imagen: "https://ae01.alicdn.com/kf/Sb04d2c97c2b94c51a15cfdb4db048c0fj.jpg",
+      whatsapp: "https://wa.me/34624387627?text=Hola,%20quiero%20la%20paleta%20de%20sombras"
     },
     {
-      nombre: "Paleta de Sombras",
-      precio: 22.50,
-      imagen: "https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80",
-      descripcion: "Colores intensos y variados."
+      nombre: "Base de Maquillaje Matte",
+      descripcion: "Acabado suave y natural. Ideal para el uso diario.",
+      imagen: "https://ae01.alicdn.com/kf/S2e8c8c3c7415439a9a2e2f72a290a0f7l.jpg",
+      whatsapp: "https://wa.me/34624387627?text=Hola,%20quiero%20la%20base%20de%20maquillaje"
     }
   ];
 
-  const container = document.getElementById('products-container');
-
+  const contenedor = document.getElementById('catalogo');
   productos.forEach(p => {
     const card = document.createElement('div');
-    card.className = 'product-card';
-
+    card.className = 'product';
     card.innerHTML = `
-      <img src="${p.imagen}" alt="${p.nombre}" />
+      <img src="${p.imagen}" alt="${p.nombre}">
       <div class="product-info">
-        <h3>${p.nombre}</h3>
-        <p class="price">$${p.precio.toFixed(2)}</p>
+        <h2>${p.nombre}</h2>
         <p>${p.descripcion}</p>
-        <button>Agregar al carrito</button>
+        <div class="buttons">
+          <a href="${p.whatsapp}" target="_blank">Encargar por WhatsApp</a>
+        </div>
       </div>
     `;
-
-    container.appendChild(card);
+    contenedor.appendChild(card);
   });
 </script>
 
