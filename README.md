@@ -1,4 +1,4 @@
-<meta name="google-site-verification" content="CyYLSySfE0_wZemfSaUlymLf4k21z9AsoJJP6Mb9wrY" />
+
   
       <!DOCTYPE html>
 <html lang="es">
@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mi Tienda de Cosmética</title>
-  <style>
+  <style><meta name="google-site-verification" content="CyYLSySfE0_wZemfSaUlymLf4k21z9AsoJJP6Mb9wrY" />
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
